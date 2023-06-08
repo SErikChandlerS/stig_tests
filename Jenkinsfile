@@ -1,17 +1,22 @@
 pipeline {
   agent any
   
-  parameters {
-    string(name: 'operatingSystem', description: 'Operating System')
-    string(name: 'architecture', description: 'Architecture')
-    // Добавьте другие параметры заявки
+  triggers {
+    GenericTrigger(
+      genericVariables: [
+        [key: 'operatingSystem', value: '$.operating_system'],
+        [key: 'architecture', value: '$.architecture']
+      ],
+      token: 'stig',
+      printContributedVariables: true
+    )
   }
   
   stages {
     stage('Process Request') {
       steps {
         script {
-          def answer = sh"python process_request.py ${params.operatingSystem} ${params.architecture}"
+          def answer = sh"python process_request.py ${genericVariables.operatingSystem} ${genericVariables.architecture}"
           return answer
         }
       }
