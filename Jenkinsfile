@@ -11,7 +11,8 @@ pipeline {
     stage('Process Request') {
       steps {
         script {
-          sh "python process_request.py ${params.operatingSystem} ${params.architecture}"
+          def answer = sh"python process_request.py ${params.operatingSystem} ${params.architecture}"
+          return answer
         }
       }
     }
