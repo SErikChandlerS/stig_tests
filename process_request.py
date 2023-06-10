@@ -40,7 +40,7 @@ def send_email(sender_email, sender_password, receiver_email, subject, body, fil
     message.attach(part)
 
     # Отправка сообщения через SMTP-сервер Gmail
-    with smtplib.SMTP("smtp.gmail.com", 587) as server:
+    with smtplib.SMTP("smtp.yandex.ru", 587) as server:
         server.starttls()
         server.login(sender_email, sender_password)
         server.sendmail(sender_email, receiver_email, message.as_string())
