@@ -1,6 +1,12 @@
 import os
 import zipfile
 import argparse
+import smtplib
+
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email import encoders
+
 
 sender_email = "stiggggggggggg@gmail.com"
 sender_password = "111qaw333"
