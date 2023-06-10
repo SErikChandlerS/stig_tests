@@ -7,11 +7,11 @@ def create_zip_archive(name):
     
     # Поиск файлов с заданным именем
     for file in os.listdir('./tests_collection_2'):
-        if file.startswith(name + '_') and os.path.isfile(file):
+        if file.startswith(name) and os.path.isfile(file):
             files.append(file)
     
     if len(files) == 0:
-        print(f"Файлы с названием '{name}_' не найдены.")
+        print(f"Файлы с названием {name} не найдены.")
         return
     
     # Создание ZIP-архива
