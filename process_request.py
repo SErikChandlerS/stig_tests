@@ -18,7 +18,7 @@ def create_zip_archive(name):
     # Создание ZIP-архива
     with zipfile.ZipFile(f"{name}_archive.zip", 'w') as zipf:
         for file in files:
-            zipf.write('./tests_collection_2'+file)
+            zipf.write('./tests_collection_2/'+file)
     
     print(f"Архив '{name}_archive.zip' успешно создан.")
     zipf.close()
