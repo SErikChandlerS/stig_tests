@@ -6,7 +6,7 @@ def create_zip_archive(name):
     files = []
     
     # Поиск файлов с заданным именем
-    for file in os.listdir('C:/ProgramData/Jenkins/.jenkins/workspace/stig/test_collection_2'):
+    for file in os.listdir('./tests_collection_2'):
         if file.startswith(name + '_') and os.path.isfile(file):
             files.append(file)
     
