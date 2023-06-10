@@ -7,11 +7,6 @@ pipeline {
   }
   
   stages {
-//     stage('Clone Repository') {
-//             steps {
-//                 git 'https://github.com/SErikChandlerS/stig_tests.git'
-//             }
-//     }
     stage('Process Request') {
       steps {
         script {
