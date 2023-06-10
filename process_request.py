@@ -9,8 +9,8 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 
-sender_email = "stiggggggggggg@gmail.com"
-sender_password = "1252312523"
+sender_email = "erik.chandler@yandex.ru"
+sender_password = "atwuvnjcyhhedxpn"
 receiver_email = "nechesanov2000@mail.ru"
 subject = "Email с вложением"
 body = "Привет, вот архив для тебя!"
@@ -71,11 +71,13 @@ def create_zip_archive(name):
 # Парсинг аргумента командной строки 'name'
 parser = argparse.ArgumentParser(description='Создание ZIP-архива для файлов с заданным именем.')
 parser.add_argument('name', type=str)
+parser.add_argument('mail', type=str)
 
 args = parser.parse_args()
+receiver_email = args.mail
 
 # Вызов функции создания архива с переданным именем
 file = create_zip_archive(args.name)
 
-#send_email(sender_email, sender_password, receiver_email, subject, body, file)
+send_email(sender_email, sender_password, receiver_email, subject, body, file)
 
