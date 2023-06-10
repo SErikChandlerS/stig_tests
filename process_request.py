@@ -66,7 +66,7 @@ def create_zip_archive(name):
     
     print(f"Архив '{name}_archive.zip' успешно создан.")
     zipf.close()
-    return '{name}_archive.zip'
+    return f'{name}_archive.zip'
 
 # Парсинг аргумента командной строки 'name'
 parser = argparse.ArgumentParser(description='Создание ZIP-архива для файлов с заданным именем.')
