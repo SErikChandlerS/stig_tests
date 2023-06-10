@@ -77,5 +77,5 @@ args = parser.parse_args()
 # Вызов функции создания архива с переданным именем
 file = create_zip_archive(args.name)
 
-send_email(sender_email, sender_password, receiver_email, subject, body, file)
+#send_email(sender_email, sender_password, receiver_email, subject, body, file)
 
