@@ -8,7 +8,7 @@ def create_zip_archive(name):
     # Поиск файлов с заданным именем
     for file in os.listdir('./tests_collection_2'):
         print(file)
-        if name in file and os.path.isfile(file):
+        if name in file:
             files.append(file)
     
     if len(files) == 0:
