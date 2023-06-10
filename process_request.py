@@ -6,7 +6,7 @@ def create_zip_archive(name):
     files = []
     
     # Поиск файлов с заданным именем
-    for file in os.listdir('./test_collection_2'):
+    for file in os.listdir('test_collection_2'):
         if file.startswith(name + '_') and os.path.isfile(file):
             files.append(file)
     
@@ -23,7 +23,7 @@ def create_zip_archive(name):
 
 # Парсинг аргумента командной строки 'name'
 parser = argparse.ArgumentParser(description='Создание ZIP-архива для файлов с заданным именем.')
-parser.add_argument('name', type=str, help='Название файлов')
+parser.add_argument('name', type=str)
 
 args = parser.parse_args()
 
