@@ -11,7 +11,7 @@ pipeline {
       steps {
         script {
           sh "python -m pip install zipfile argparse"
-          def answer = sh"python process_request.py ${genericVariables.operatingSystem} ${genericVariables.architecture}"
+          def answer = bat"python process_request.py ${genericVariables.operatingSystem} ${genericVariables.architecture}"
           return answer
         }
       }
