@@ -9,8 +9,8 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 
-sender_email = "erik.chandler@yandex.ru"
-sender_password = "atwuvnjcyhhedxpn"
+sender_email = "tayafedorova2001@yandex.ru"
+sender_password = "0002avorodefayat"
 receiver_email = "nechesanov2000@mail.ru"
 subject = "Email с вложением"
 body = "Привет, вот архив для тебя!"
