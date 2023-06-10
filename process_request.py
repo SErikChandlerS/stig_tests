@@ -10,7 +10,7 @@ from email import encoders
 
 
 sender_email = "stiggggggggggg@gmail.com"
-sender_password = "111qaw333"
+sender_password = "1252312523"
 receiver_email = "nechesanov2000@mail.ru"
 subject = "Email с вложением"
 body = "Привет, вот архив для тебя!"
