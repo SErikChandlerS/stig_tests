@@ -1,15 +1,9 @@
 pipeline {
   agent any
   
-  triggers {
-    GenericTrigger(
-      genericVariables: [
-        [key: 'operatingSystem', value: '$.operating_system'],
-        [key: 'architecture', value: '$.architecture']
-      ],
-      token: 'stig',
-      printContributedVariables: true
-    )
+  parameters {
+        string(name: 'architecture', description: 'Architecture parameter')
+        string(name: 'operating_system', description: 'Operating System parameter')
   }
   
   stages {
